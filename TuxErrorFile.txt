@@ -1,0 +1,36 @@
+
+CMDTUX_CAT:98: ERROR: simple specified in MASTER, but not defined in MACHINES section
+
+CMDTUX_CAT:867: ERROR: tmloadcf: Above errors found during syntax checking
+
+=============================================================================================
+
+
+CMDTUX_CAT:111: ERROR: TUXCONFIG (/opt/app/atmi/simpserv) of machine simple must be the same as t                                                                                                    he TUXCONFIG environment variable (/opt/app/atmi/tuxconfig)
+
+CMDTUX_CAT:867: ERROR: tmloadcf: Above errors found during syntax checking
+
+
+--------------------------------------------------------------------------------------------
+
+
+
+
+CMDTUX_CAT:868: ERROR: tmloadcf cannot run on a non-master node
+
+
+
+
+[oracle@srv1 atmi]$ nslookup srv1
+;; Got SERVFAIL reply from 192.168.0.3, trying next server
+Server:         8.8.8.8
+Address:        8.8.8.8#53
+
+** server can't find srv1: NXDOMAIN
+
+
+
+[oracle@srv1 atmi]$ nslookup 192.168.0.125
+** server can't find 125.0.168.192.in-addr.arpa.: NXDOMAIN
+
+

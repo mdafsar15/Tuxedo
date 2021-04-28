@@ -1,0 +1,61 @@
+  #include <stdio.h>         
+2     #include "atmi.h"            /* TUXEDO */
+3
+4
+5
+6
+7     #ifdef __STDC__
+8     main(int argc, char *argv[])
+9
+10    #else
+11
+12    main(argc, argv)
+13    int argc;
+14    char *argv[];
+15    #endif
+16
+17    {
+18
+19             char *sendbuf, *rcvbuf;
+20             int sendlen, rcvlen;
+21             int ret;
+22
+23             if(argc != 2) {
+24                      fprintf(stderr, "Usage: simpcl string\n");
+25                      exit(1);
+26             }
+27             /* Attach to BEA TUXEDO as a Client Process */
+28             if (tpinit((TPINIT *) NULL) == -1) {
+29                      fprintf(stderr, "Tpinit failed\n");
+30                      exit(1);
+31             }
+32             sendlen = strlen(argv[1]);
+33             if((sendbuf = (char *)tpalloc("STRING", NULL, sendlen+1))== NULL){
+34                      fprintf(stderr,"Error allocating send buffer\n");
+35                      tpterm();
+36                      exit(1);
+37             }
+38             if((rcvbuf = (char *)tpalloc("STRING", NULL, sendlen+1))== NULL){
+39                      fprintf(stderr,"Error allocating receive buffer\n");
+40                      tpfree(sendbuf);
+41                      tpterm();
+42                      exit(1);
+43             }
+44             strcpy(sendbuf, argv[1]);
+45             ret = tpcall("TOUPPER", sendbuf, NULL, &rcvbuf, &rcvlen, 0);
+46             if(ret == -1) {
+47                      fprintf(stderr, "Can't send request to service TOUPPER\n");
+48                      fprintf(stderr, "Tperrno = %d, %s\n", tperrno,
+49                                tmemsgs[tperrno]);
+50                      tpfree(sendbuf);
+51                      tpfree(rcvbuf);
+52                      tpterm();
+53                      exit(1);
+54             }
+55             printf("Returned string is: %s\n", rcvbuf);
+56
+57             /* Free Buffers & Detach from Oracle TUXEDO */
+58             tpfree(sendbuf);
+59             tpfree(rcvbuf);
+60             tpterm();
+61    }

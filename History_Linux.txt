@@ -1,0 +1,995 @@
+login as: root
+root@192.168.0.125's password:
+Last login: Fri Mar 19 14:58:08 2021 from 192.168.0.235
+bash: n: command not found...
+[root@srv1 ~]# history
+    1  echo $JAVA_HOME
+    2  tar -xvzf /u01/software/jdk-8u281-linux-aarch64.tar.gz
+    3  tar xvf jdk-8u281-linux-aarch64.gz
+    4  tar xvf jdk-8u281-linux-aarch64.tar.gz
+    5  java --version
+    6  java -version
+    7  export JAVA_HOME=/opt/app/oracle/jdk1.8.0_282
+    8  export PATH=$JAVA_HOME/bin:$PATH
+    9  cd /opt/
+   10  cd app/
+   11  cd tuxedo/
+   12  echo $JAVA_HOME
+   13  ./runInstaller.sh
+   14  ls -ltr
+   15  cd Disk1/
+   16  cd install/
+   17  ls -ltr
+   18  ./runInstaller.sh
+   19  export JAVA_HOME=/opt/app/tuxedo/jdk1.8.0_282
+   20  export PATH=$JAVA_HOME/bin:$PATH
+   21  echo $JAVA_HOME
+   22  ./runInstaller.sh
+   23  cd
+   24  cd /opt
+   25  cd app/
+   26  cd tuxedo/
+   27  ls -ltr
+   28  export JAVA_HOME=/opt/app/tuxedo/jdk1.8.0_281
+   29  export PATH=$JAVA_HOME/bin:$PATH
+   30  echo $JAVA_HOME
+   31  ./runInstaller.sh
+   32  cd Disk1/
+   33  cd install/
+   34  ls -ltr
+   35  ./runInstaller.sh
+   36  runInstaller.sh
+   37  pwd
+   38  ./runInstaller.sh
+   39  chmod -R 755 jdk1.8.0_281
+   40  cd /opt/
+   41  cd app/
+   42  cd tuxedo/
+   43  ls -ltr
+   44  chmod -R 755 jdk1.8.0_281
+   45  chown test  /opt/app/tuxedo/Disk1/install
+   46  ll -ld
+   47  ll -ld  /opt/app/tuxedo/Disk1/install
+   48  chgrp  test  /opt/app/tuxedo/Disk1/install
+   49  ll -ld
+   50  ll -ld  /opt/app/tuxedo/Disk1/install
+   51  cd Disk1/
+   52  cd install/
+   53  ls -ltr
+   54  chmod 755 *
+   55  ls -ltr
+   56  find. -name oracle
+   57  find . -name oracle
+   58  cd /opt/
+   59  cd app/
+   60  cd tuxedo/
+   61  find . -name oracle
+   62  chmod 755 LINUX.X64_193000_db_home.zip
+   63  unzip LINUX.X64_193000_db_home.zip
+   64  ls -ltr
+   65  ./runInstaller
+   66  ll runInstaller
+   67  chmod 755 runInstaller
+   68  chmod 755 bin
+   69  chmod -r 755 bin
+   70  chmod -R 755 bin
+   71  cd ..
+   72  ls -ltr
+   73  chmod -R 755 tuxedo/
+   74  cd tuxedo/
+   75  ls -ltr
+   76  ssh -v -X root@localhost
+   77  cd /opt/
+   78  cd app/
+   79  cd tuxedo/
+   80  xhost +
+   81  grep display
+   82  grep DISPLAY /.bash_profile
+   83  xdpyinfo | grep name
+   84  cd ..
+   85  cd
+   86  grep DISPLAY ~/.bash_profile
+   87  export DISPLAY =192.168.0.125:0
+   88  export DISPLAY=192.168.0.125:0
+   89  xdpyinfo | grep name
+   90  cd /opt/
+   91  cd app/
+   92  cd tuxedo/
+   93  ls -ltr
+   94  ./runInstaller
+   95  su - oracle
+   96  Type a message
+   97  history
+   98  grep DISPLAY ~/.bash_profile
+   99  export DISPLAY =192.168.0.125:0
+  100  export DISPLAY=192.168.0.125:0
+  101  xdpyinfo | grep name
+  102  ssh -v -X oraadmin@oraserver
+  103  Type a message
+  104  ssh -v -X root@localhost
+  105  history
+  106  xhost +
+  107  netstat -na  | grep -i port
+  108  Type a message
+  109  netstat -na  | grep -i 6000
+  110  ssh -x root@localhost
+  111  xhost +
+  112  grep DISPLAY ~/.bash_profile
+  113  xdpyinfo | grep name
+  114  export DISPLAY=192.168.0.125:0
+  115  grep DISPLAY ~/.bash_profile
+  116  xdpyinfo | grep name
+  117  nslookup localhost
+  118  export DISPLAY=192.168.0.3:0
+  119  grep DISPLAY ~/.bash_profile
+  120  xdpyinfo | grep name
+  121  echo $DISPLAY
+  122  which xauth
+  123  Type a message
+  124  which xauth
+  125  xauth list | grep -i 12
+  126  Type a message
+  127  xauth list | grep -i 0
+  128  xauth add :0
+  129  Type a message
+  130  xauth add :0 MIT-MAGIC-COOKIE-1  11a536b5261f93b0de9ef564082e03c0
+  131  xauth list
+  132  Type a message
+  133  cd ..
+  134  cd ../
+  135  xfontsel
+  136  cd
+  137  [test@localhost ~]$ echo $DISPLAY
+  138  echo $DISPLAY
+  139  xauth list | grep :0
+  140  Type a message
+  141  xauth list | grep -i 0
+  142  echo $DISPLAY
+  143  xauth list | grep -i 0
+  144  cd ../
+  145  xauth list | grep -i 0
+  146  cd ..
+  147  cd
+  148  xauth list | grep -i 0
+  149  xfontsel
+  150  Type a message
+  151  which xfontsel
+  152  Type a message
+  153  xhost +
+  154  echo $DISPLAY
+  155  export DISPLAY=:0
+  156  Type a message
+  157  cd /opt/
+  158  cd app/
+  159  cd tuxedo/
+  160  ls -ltr
+  161  ./runInstaller
+  162  chown test /opt/app/tuxedo
+  163  chgrp test /opt/app/tuxedo
+  164  history
+  165  uname -r
+  166  cat /etc/os-release
+  167  yum update -y
+  168  yum install -y oracle-database-preinstall-19c
+  169  yum install -y https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/                                                                                                                     getPackage/oracle-database-preinstall-19c-1.0-1.el7.x86_64.rp
+  170  export DISPLAY=:0
+  171  cd /opt/
+  172  cd app/
+  173  cd tuxedo/
+  174  ./runInstaller
+  175  ls -ltr
+  176  cd ..
+  177  cd
+  178  chmod -R 775 test /opt/app
+  179  chmod -R 775 /opt/app
+  180  chmod -R 755 *
+  181  cd /opt/
+  182  cd app/
+  183  mkdir Oracle_Db
+  184  cd Oracle_Db/
+  185  ls -ltr
+  186  yum install -y oracle-database-preinstall-19c
+  187  yum update -y
+  188  yum install -y https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/                                                                                                                     getPackage/oracle-database-preinstall-19c-1.0-1.el7.x86_64.rpm
+  189  yum install -y unixODBC
+  190  groupadd -g 54321 oinstall
+  191  passwd oracle
+  192  SELINUX=permissive
+  193  mkdir -p /u01/app/oracle/product/19.0.0/dbhome_1
+  194  mkdir -p /u02/oradata
+  195  chown -R oracle:oinstall /u01 /u02
+  196  chmod -R 775 /u01 /u02
+  197  xhost +
+  198  mkdir /home/oracle/scripts
+  199  grep DISPLAY ~/.bash_profile
+  200  export DISPLAY=192.168.57.1:0
+  201  xdpyinfo | grep name
+  202  cat > /home/oracle/scripts/setEnv.sh <<EOFexport TMP=/tmp
+  203  export TMPDIR=\$TMP
+  204  export ORACLE_HOSTNAME=ol7-19.localdomain
+  205  export ORACLE_UNQNAME=cdb1
+  206  export ORACLE_BASE=/u01/app/oracle
+  207  export ORACLE_HOME=\$ORACLE_BASE/product/19.0.0/dbhome_1
+  208  export ORA_INVENTORY=/u01/app/oraInventory
+  209  export ORACLE_SID=cdb1
+  210  export PDB_NAME=pdb1
+  211  export DATA_DIR=/u02/oradata
+  212  export PATH=/usr/sbin:/usr/local/bin:\$PATH
+  213  export PATH=\$ORACLE_HOME/bin:\$PATH
+  214  export LD_LIBRARY_PATH=\$ORACLE_HOME/lib:/lib:/usr/lib
+  215  export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib
+  216  EOF
+  217  echo ". /home/oracle/scripts/setEnv.sh" >> /home/oracle/.bash_profile
+  218  cat > /home/oracle/scripts/start_all.sh <<EOF. /home/oracle/scripts/setEn                                                                                                                     v.sh
+  219  export ORAENV_ASK=NO
+  220  . oraenv
+  221  export ORAENV_ASK=YES
+  222  dbstart \$ORACLE_HOME
+  223  EOF
+  224  cat > /home/oracle/scripts/stop_all.sh <<EOF. /home/oracle/scripts/setEnv                                                                                                                     .sh
+  225  export ORAENV_ASK=NO
+  226  . oraenv
+  227  export ORAENV_ASK=YES
+  228  dbshut \$ORACLE_HOME
+  229  EOF
+  230  chown -R oracle:oinstall /home/oracle/scripts
+  231  chmod u+x /home/oracle/scripts/*.sh
+  232  ~/scripts/start_all.sh
+  233  export DISPLAY=0.0
+  234  ls -ltr
+  235  unzip -oq LINUX.X64_193000_db_home.zip
+  236  ls -ltr
+  237  ./runInstaller
+  238  export DISPLAY=0.0
+  239  ./runInstaller
+  240  export DISPLAY=:0
+  241  ./runInstaller
+  242  usermod -a -G vboxsf oracle
+  243  su - oracle
+  244  groupadd oinstall
+  245  usermod -g oinstall oracle
+  246  mkdir -p /u01/app/oracle/product/19.0.0/db_1
+  247  mkdir -p /u01/app/oraInventory
+  248  chown -R oracle:oinstall /u01/app/oracle
+  249  chown -R oracle:oinstall /u01/app/oraInventory
+  250  vi /etc/sysctl.d/97-oracle-database-sysctl.conf
+  251  /sbin/sysctl --system
+  252  yum install ksh
+  253  yum install libaio-devel.x86_64
+  254  su - oracle
+  255  cd /opt/
+  256  cd app/
+  257  rmdir Oracle_Db/
+  258  rm Oracle_Db/
+  259  rm -f Oracle_Db/
+  260  rmdir -f Oracle_Db/
+  261  rm -rf Oracle_Db/
+  262  ls -ltr
+  263  mkdir Oracle_Db
+  264  su - oracle
+  265  cd /opt/
+  266  cd app/
+  267  ls -ltr
+  268  rm -f Oracle_Db/
+  269  rm -rf Oracle_Db/
+  270  mkdir Oracle_Db
+  271  ls -ltr
+  272  su - oracle
+  273  cd /opt/
+  274  cd app/
+  275  cd Oracle_Db/
+  276  sudo yum install xorg-x11-utils -y
+  277  yum install xorg-x11-utils
+  278  [oracle@ouzo ~]$ cd /usr/bin
+  279  [oracle@ouzo bin]$ ls -al | grep xdpyinfo
+  280  -rwxr-xr-x   1 root root      38112 Feb 23  2015 xdpyinfo
+  281  xhost +SI:localuser:oracle
+  282  xhost +SI:localuser:root
+  283  xhost +
+  284  cd /opt/
+  285  cd app/
+  286  cd Oracle_Db/
+  287  ls -lst
+  288  cd ..
+  289  cd tuxedo/
+  290  ls -ltr
+  291  ./runInstaller
+  292  xdpyinfo
+  293  cat /etc/os-release
+  294  cd /opt
+  295  cd app/
+  296  cd
+  297  cd t
+  298  cd /opt/app/tuxedo/
+  299  ls -ltr
+  300  ./runInstaller
+  301  export DISPLAY=:0
+  302  ./runInstaller
+  303  xhost +
+  304  ssh -v -X root@localhost
+  305  xhost +
+  306  su - oracle
+  307  ssh -v -X root@localhost
+  308  xhost +
+  309  su - test
+  310  cd /opt/
+  311  cd /a
+  312  cd app/
+  313  cd tuxedo/
+  314  ls -ltr
+  315  xhost +
+  316  ./runInstaller
+  317  su - oracle
+  318  cd ..
+  319  chown 775 -R *
+  320  su - oracle
+  321  xhost +
+  322  xdpyinfo
+  323  su - oracle
+  324  cd /opt/app/Oracle_Db/
+  325  ls -ltr
+  326  unzip LINUX.X64_193000_db_home.zip
+  327  ls -ltr
+  328  export DISPLAY=:0
+  329  ./runInstaller
+  330  su - oracle
+  331  cd /opt/app/
+  332  chown 775 -R *
+  333  chgrp 775 -R *
+  334  su - oracle
+  335  ls -ltr
+  336  chown 775 -rf Oracle_Db/
+  337  chown 775 -RF Oracle_Db/
+  338  chown 775 -R Oracle_Db/
+  339  su - oracle
+  340  xhost +
+  341  cd /opt/app/
+  342  ls -ltr
+  343  chown -R 777 Oracle_Db/
+  344  su - oracle
+  345  cd /opt/
+  346  cd app/tuxedo/
+  347  cd ..
+  348  ls -ltr
+  349  rm -rf Oracle_Db/
+  350  ls -ltr
+  351  cd tuxedo/
+  352  ls -ltr
+  353  ./runInstaller
+  354  xhost +
+  355  su - oracle
+  356  xhost +
+  357  ping 192.168.0.125
+  358  vi /etc/hosts
+  359  ping 192.168.0.125
+  360  cd /opt/app/tuxedo/
+  361  ls -ltr
+  362  su - oracle
+  363  xhost +
+  364  ifconfig
+  365  service network restart
+  366  ping 192.168.0.96
+  367  systemctl status firewalld.service
+  368  systemctl stop firewalld.service
+  369  ping 192.168.0.96
+  370  systemctl status firewalld.service
+  371  clear
+  372  exit
+  373  cd /opt/app/tuxedo/
+  374  xhost +
+  375  ./runInstaller
+  376  xhost +
+  377  su - oracle
+  378  exit
+  379  su - oracle
+  380  exit
+  381  ping google.com
+  382  service network restart
+  383  systemctl restart network.service
+  384  systemctl status network.service
+  385  reboot
+  386  vncserver
+  387  exit
+  388  su - oracle
+  389  xhost +
+  390  su - oracle
+  391  java -version
+  392  sqlplus / as sysdba
+  393  su - oracle
+  394  systemctl stop firewalld.service
+  395  systemctl status firewalld.service
+  396  vncserver
+  397  cd /opt/
+  398  cd app/tuxedo/
+  399  ls -ltr
+  400  java -version
+  401  tar jdk-8u281-linux-i586.tar.gz
+  402  tar -xvzf jdk-8u281-linux-i586.tar.gz
+  403  java -version
+  404  su - oracle
+  405  mkdir /usr/java
+  406  tar /opt/app/tuxedo/jdk-8u281-linux-i586.tar.gz /usr/java/
+  407  tar -xvzf /opt/app/tuxedo/jdk-8u281-linux-i586.tar.gz /usr/java/
+  408  tar -xvzf /opt/app/tuxedo/jdk-8u281-linux-i586.tar.gz /usr/java
+  409  cp -r /opt/app/tuxedo/jdk-8u281-linux-i586.tar.gz /usr/java/
+  410  tar /usr/java/ jdk-8u281-linux-i586.tar.gz
+  411  tar -xvzf /usr/java/ jdk-8u281-linux-i586.tar.gz
+  412  su - oracle
+  413  xhost +
+  414  su - oracle
+  415  java -version
+  416  echo $JAVA_HOME
+  417  su oracle
+  418  su - oracle
+  419  cd /opt/app/tuxedo
+  420  chmod -R 775 *
+  421  su - oracle
+  422  ifconfig
+  423  uname -m
+  424  cd /opt/app/tuxedo/
+  425  ls -ltr
+  426  tar jdk-8u281-linux-i586.tar.gz
+  427  tar -xvzf jdk-8u281-linux-i586.tar.gz
+  428  java -version
+  429  su - oracle
+  430  xhost +
+  431  grep DISPLAY ~/.bash_profile
+  432  xdpyinfo | grep name
+  433  su - oracle
+  434  cd /opt/app/tuxedo/
+  435  ls -ltr
+  436  cd Disk1/
+  437  cd install/
+  438  ls -ltr
+  439  ./runInstaller.sh
+  440  export JAVA_HOME=/opt/app/tuxedo/jdk1.8.0_281
+  441  export PATH=$JAVA_HOME/bin:$PATH
+  442  echo $JAVA_HOME
+  443  ./runInstaller.sh
+  444  su - oracle
+  445  java
+  446  yum -y install java-1.8.0-openjdk-devel
+  447  java
+  448  yum -y install java-1.8.0-openjdk-devel
+  449  cd
+  450  cd /opt/
+  451  cd app/tuxedo/
+  452  ls -ltr
+  453  java -version
+  454  cd jdk
+  455  jdk
+  456  jdk -version
+  457  cd..
+  458  cd ..
+  459  jdk -version
+  460  apt-get update
+  461  sudo apt-get update
+  462  cd
+  463  cd /opt/app/tuxedo/jdk
+  464  ls -ltr
+  465  cd bin
+  466  cd ..
+  467  ls -ltr
+  468  cd jdk1.8.0_281/
+  469  ls -ltr
+  470  cd bin
+  471  ls -ltr
+  472  ./java -version
+  473  cd
+  474  cd /opt/app/tuxedo/
+  475  ls -ltr
+  476  tar -xvzf jdk-8u281-linux-aarch64.tar.gz
+  477  ls
+  478  java -version
+  479  ./java -version
+  480  cd jdk1.8.0_281/
+  481  cd bin/
+  482  ls
+  483  ./java -version
+  484  pwd
+  485  cd ..
+  486  pwd
+  487  cd
+  488  vim /etc/profile
+  489  java -version
+  490  java
+  491  su - oracle
+  492  su - oracle
+  493  xhost +
+  494  su - oracle
+  495  vncviewer
+  496  vncserver
+  497  systemctl stop firewalld.service
+  498  reboot
+  499  vncserver
+  500  exit
+  501  su - oracle
+  502  xhost +
+  503  su - oracle
+  504  xhost +
+  505  su - oracle
+  506  reboot
+  507  systemctl status firewalld.service
+  508  systemctl stop firewalld.service
+  509  systemctl disable firewalld.service
+  510  systemctl status firewalld
+  511  systemctl stop firewalld
+  512  systemctl disable firewalld
+  513  xhost +
+  514  su - oracle
+  515  cd /opt/app/tuxedo/
+  516  chmod -R 776 jdk1.8.0_281/
+  517  cd /tmp
+  518  ll
+  519  du -sk *| sort -n
+  520  rmdir OraInstall2021-03-11_10-12-21AM/
+  521  rmdir -rf OraInstall2021-03-11_10-12-21AM/
+  522  rm -rf OraInstall2021-03-11_10-12-21AM/
+  523  su - oracle
+  524  vncserver
+  525  df -h
+  526  systemctl status firewalld.service
+  527  exit
+  528  xhost
+  529  xhost +
+  530  su - oracle
+  531  uname -
+  532  uname-
+  533  uname -a
+  534  cd /opt/app/
+  535  mkdir 3psw
+  536  cd 3psw/
+  537  mkdir java
+  538  cd java/
+  539  cd ..
+  540  rm -rf java
+  541  tar zxvf jdk-8u281-linux-i586.tar.gz
+  542  ls -ltr
+  543  ln -sf jdk1.8.0_281 java
+  544  ls -ltr
+  545  cd ..
+  546  ls -ltr
+  547  mkdir oracle
+  548  cd oracle/
+  549  ls -ltr
+  550  unzip LINUX.X64_193000_db_home.zip
+  551  su - oracle
+  552  cd /opt/app/oracle/
+  553  chmod -R 775 Li
+  554  ls -ltr
+  555  chmod -R 775 LINUX.X64_193000_db_home.zip
+  556  xhost +
+  557  chmod -R 775 LINUX.X64_193000_db_home.zip
+  558  chmod 777 LINUX.X64_193000_db_home.zip
+  559  cd
+  560  passwd oracle
+  561  su - oracle
+  562  java -version
+  563  su - oracle
+  564  java -version
+  565  rpm -qa | grep jdk
+  566  rpm -e java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64
+  567  rpm -e java-1.8.0-openjdk-headless-1.8.0.282.b08-1.el7_9.x86_64
+  568  java -version
+  569  rpm -e java-1.8.0-openjdk-headless-1.8.0.282.b08-1.el7_9.x86_64
+  570  rpm -e java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64
+  571  rpm -e copy-jdk-configs-3.3-10.el7_5.noarch
+  572  rpm -e java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64
+  573  sudo dpkg --list | grep -i jdk
+  574  java -version
+  575  vim /etc/profile
+  576  java -version
+  577  cd /opt/app/oracle/
+  578  ls -ltr
+  579  rm -rf LINUX.X64_193000_db_home.zip
+  580  cd ..
+  581  chmod -R 775 opt/
+  582  chmod -R 775 opt/app/
+  583  chmod -R 775 opt/app/oracle/
+  584  chmod -R 777 opt/
+  585  cd /opt/app/oracle/
+  586  cd ..
+  587  chown oracle oracle
+  588  chgrp oracle oracle
+  589  ll -ld
+  590  pwd
+  591  ls -ltr
+  592  chgrp oracle oracle
+  593  cd tuxedo/
+  594  ls -ltr
+  595  rm -rf LINUX.X64_193000_db_home.zip
+  596  rm -rf jdk-8u281-linux-i586.tar.gz
+  597  ls -ltr
+  598  cd /tmp/
+  599  ls -ltr
+  600  rm -rf InstallActions2021-03-11_11-*
+  601  ls -ltr
+  602  rm -rf InstallActions2021*
+  603  ls -ltr
+  604  cd /opt/app/oracl
+  605  cd /opt/app/oracle
+  606  ls -ltr
+  607  cd ..
+  608  ls -ltr
+  609  rm -rf 3psw/
+  610  cd
+  611  yum install glibc.i686
+  612  cd
+  613  which java
+  614  cd /usr
+  615  cd /bin/
+  616  cd java
+  617  ls -ltr
+  618  rm -rf java
+  619  cd
+  620  java -version
+  621  export JAVA_HOME=/opt/app/3psw/jdk1.7.0_80/jre/bin
+  622  export PATH=$JAVA_HOME/bin:$PATH
+  623  java -version
+  624  su - oracle
+  625  java
+  626  su - oracle
+  627  su - oracle
+  628  yum install jdk1.8.0_261
+  629  yum install jdk1.8
+  630  sudo apt-get update
+  631  apt-get update
+  632  apt update
+  633  echo $PATH
+  634  java
+  635  npm
+  636  sudo
+  637  sudo oraji
+  638  su -oracle
+  639  su - oracle
+  640  apt-get update
+  641  yum install glibc.i686
+  642  yum install libstdc++.so.6
+  643  yum install libstdc++.i686
+  644  yum install xulrunner.i686
+  645  cd .profile
+  646  su - oracle
+  647  echo $JAVA_HOME
+  648  echo $ORACLE_HOME
+  649  su - oracle
+  650  su - oracle
+  651  ls -ltr
+  652  cd /opt/app/3psw/
+  653  ls -ltr
+  654  java
+  655  xhost +
+  656  su - oracle
+  657  su - oracel
+  658  su - oracle
+  659  ls -ltr
+  660  ls -ltr .bash_profile
+  661  cat .bash_profile
+  662  su oracle
+  663  su - oracle
+  664  su oracle
+  665  hostname
+  666  uname
+  667  uname-m
+  668  uname -m
+  669  su oracle
+  670  su - oracle
+  671  su - oracle
+  672  vncserver
+  673  su oracle
+  674  xhost +
+  675  su oracle
+  676  cd /opt/app/Tuxedo12c/
+  677  ls -ltr
+  678  ./orainstRoot.sh
+  679  cd ..
+  680  cd oracInt
+  681  ls -ltr
+  682  cd oraclnt/
+  683  cd oracle/
+  684  ls -ltr
+  685  ./orainstRoot.sh
+  686  ls -ltr
+  687  cd product/
+  688  ls -ltr
+  689  ./orainstRoot.sh
+  690  ls -ltr
+  691  cd oraclient/
+  692  ls -ltr
+  693  cd /opt/app/oracle
+  694  ls -ltr
+  695  ./root.sh
+  696  ls -ltr
+  697  cd /opt/app/ora
+  698  cd /opt/app/oracle
+  699  ls -ltr
+  700  sqlplus / as sysdba
+  701  ls -ltr
+  702  unzip LINUX.X64_193000_db_home.zip
+  703  cd
+  704  groupadd onistall
+  705  usermod -g onistall oracle
+  706  mkdir -p /opt/app/oracle/product/19.0.0/db_1
+  707  mkdir -p /opt/app/oraInventory
+  708  chown -R oracle:onistall /opt/app/oracle
+  709  chown -R oracle:onistall /opt/app/oraInventory
+  710  vi /etc/sysctl.d/97-oracle-database-sysctl.confi
+  711  /sbin/sysctl --system
+  712  cd /opt/app/
+  713  ls -ltr
+  714  cat New\ Text\ Document.txt
+  715  cd
+  716  groupadd oinstall
+  717  usermod -g oinstall oracle
+  718  mkdir -p /u01/app/oracle/product/19.0.0/db_1
+  719  mkdir -p /u01/app/oraInventory
+  720  chown -R oracle:oinstall /u01/app/oracle
+  721  chown -R oracle:oinstall /u01/app/oraInventory
+  722  vi /etc/sysctl.d/97-oracle-database-sysctl.confi
+  723  chown -R oracle:oinstall /u01/app/oraInventory
+  724  vi /etc/sysctl.d/97-oracle-database-sysctl.confi
+  725  groupadd oinstall
+  726  usermod -g oinstall oracle
+  727  mkdir -p /u01/app/oracle/product/19.0.0/db_1
+  728  mkdir -p /u01/app/oraInventory
+  729  chown -R oracle:oinstall /u01/app/oracle
+  730  chown -R oracle:oinstall /u01/app/oraInventory
+  731  /sbin/sysctl --system
+  732  yum install libaio-devel.x86_64
+  733  cd
+  734  cd /u01/app/oracle/product/19.0.0/db_1/
+  735  ls -ltr
+  736  root.sh
+  737  ./root.sh
+  738  sqlplus / as sysdba
+  739  find . -name product
+  740  find . -name 19.
+  741  su oracle
+  742  hostname
+  743  cd /opt/app/oracle19c/product/19.3.0/db_1/
+  744  ./root.sh
+  745  sqlplus / as sysdba
+  746  cd /opt/app/oracle
+  747  groupadd onistall
+  748  mkdir -p product/19.3.0
+  749  mkdir -p oraInventory
+  750  chown -R oracle:onistall /opt/app/oracle
+  751  chown -R oracle:onistall /opt/app/oraInventory
+  752  mkdir -p oraInventory
+  753  chown -R oracle:onistall /opt/app/oraInventory
+  754  ls -ltr
+  755  rm -rf oraInventory/
+  756  cd ..
+  757  mkdir -p oraInventory
+  758  chown -R oracle:onistall /opt/app/oraInventory
+  759  cd oracle/product/19.3.0/
+  760  ./root.sh
+  761  cd /opt/app/Tuxedo12c/
+  762  ls -ltr
+  763  ./orainstRoot.sh
+  764  yum update -y
+  765  cat /etc/yum.conf
+  766  vi /etc/yum.conf
+  767  cat /etc/yum.conf
+  768  yum update -y
+  769  yum install gcc
+  770  grep /etc/yum.repos.d/* | grep HDP
+  771  yum install gcc
+  772  yum install gcc
+  773  gcc
+  774  sudo apt update
+  775  make
+  776  yum install gcc
+  777  yum update
+  778  ll /etc/yum.repos.d
+  779  yum clean all
+  780  rm -fr /var/cache/yum/*
+  781  yum update
+  782  rm -fr /var/cache/yum/*
+  783  yum clean all
+  784  pid
+  785  yum clean metadata
+  786  ps -ef | grep 15332
+  787  kill -9 15332
+  788  yum clean all
+  789  yum clean metadata
+  790  yum update
+  791  yum clean dbcache
+  792  yum makecache
+  793  yum update -y
+  794   yum --disablerepo=ol7_UEKR6 ...
+  795  yum clean all
+  796  yum remove epel-release
+  797  yum 'baseurl' /etc/yum.repos.d/* | grep HDP
+  798  yum -y install ranger_2_6_3_0_234-admin
+  799  yum
+  800  hostname srv1
+  801  cd
+  802  su - oracle
+  803  nslookup srv1
+  804  su oracle
+  805  sudo hostname -F /etc/hostname
+  806  ipconfig
+  807  nslookup srv1
+  808  hostname -a
+  809  hostname -A
+  810  nslookup srv1.localdomain
+  811  nslookup localhost.localdomain
+  812  cd /etc
+  813  ls -ltr
+  814  ll -ld hostname
+  815  cat hostname
+  816  nslookup localhost.localdomain
+  817  nslookup localhost
+  818  nslookup srv1
+  819  su oracle
+  820  cd /tmp
+  821  ls -ltr
+  822  du -sk * | sort -n
+  823  ll orcl6170400820500004220.tmp/
+  824  ll orcl6170400820500004220.tmp
+  825  ll -ld orcl6170400820500004220.tmp/
+  826  ll -ld orcl6170400820500004220.tmp
+  827  rm -rf orcl6944980304337676808.tmp/
+  828  rm -rf orcl7566163119598318515.tmp/
+  829  ls -ltr
+  830  du -sk * | sort -n
+  831  rm -rf orcl7359647735361777970.tmp/
+  832  rm -rf orcl6970387720614811408.tmp/
+  833  du -sk * | sort -n
+  834  rm -rf orcl6472882158276274026.tmp/
+  835  rm -rf orcl3061265535968922175.tmp/
+  836  du -sk * | sort -n
+  837  cd
+  838  du -sk * | sort -n
+  839  cd /tmp
+  840  du -sk * | sort -n
+  841  rm -rf OraInstall2021-03-12_04-28-37PM/
+  842  rm -rf OraInstall2021-03-12_04-30-29PM/
+  843  du -sk * | sort -n
+  844  su oracle
+  845  su oracle
+  846  yum install gcc
+  847  public-yum install gcc
+  848  yum update
+  849  service network restart
+  850  reboot
+  851  yum update -y
+  852  free -m
+  853  echo 1 > /proc/sys/vm/drop_caches
+  854  free -m
+  855  cat large_file > /dev/null
+  856  du -sh *file
+  857  yum install gcc
+  858  free -m
+  859  yum install gcc
+  860  ps -ef
+  861  pf -ef | grep gcc
+  862  ps -ef | grep gcc
+  863  free -m
+  864  top
+  865  ps -ef | grep -i root | wc -l
+  866  ps -ef | grep -i oracle | wc -l
+  867  ps -ef | grep -i oracle
+  868  ps -ef | grep -i oracle | grep ora*
+  869  su - oracle
+  870  ps -ef | grep -i oracle | wc -l
+  871  ps -ef | grep -i oracle
+  872  kill -9 31674
+  873  kill -9 31679
+  874  kill -9 31689'
+  875  kill -9 31689
+  876  kill -9 31710
+  877  kill -9 31701
+  878  kill -9 31731
+  879  kill -9 31770
+  880  kill -9 31777
+  881  kill -9 31784
+  882  ps -ef | grep -i oracle
+  883  yum install gcc
+  884  free -m
+  885  sudo apt-get update
+  886  sudo apt update
+  887  yum update -y
+  888  gcc -version
+  889  which gcc
+  890  cd /tmp
+  891  ls -ltr
+  892  rm -rf yum_save_tx*
+  893  ls -ltr
+  894  rm -rf yum*
+  895  ls -ltr
+  896  rm -rf InstallActions2021-03-11_04-41-*
+  897  ls -ltr
+  898  sudo apt-get update
+  899  sudo apt update
+  900  sudo yum install gcc
+  901  yum update
+  902  subscription-manager refresh
+  903  subscription-manager repos --list|grep cf -me
+  904  subscription-manager registesrt
+  905  subscription-manager register
+  906  subscription-manager registor
+  907  cd
+  908  yum update
+  909  subscription-manager registor
+  910  subscription-manager refresh
+  911  subscription-manager register --auto-attach
+  912  yum clean all
+  913  yum list available | grep erna
+  914  yum-config-manager --disable updates
+  915  yum update
+  916  sudo dhclient
+  917  yum update
+  918  cd /etc/yum.repos.d/CentOS-Base.repo
+  919  ps -ef | grep mnp_repo
+  920  grep http://192.168.0.125/mnp_repo /etc/yum.repos.d/* | grep HDP
+  921  yum update
+  922  vi /etc/yum.conf
+  923  cd /etc/yum.repos.d/
+  924  mv public-yum-el5.repo public-yum-el5.repo_old
+  925  cd
+  926  yum install gcc
+  927  vncserver
+  928  systemctl status firewalld.service
+  929  systemctl stop  firewalld.service
+  930  systemctl disable firewalld.service
+  931  systemctl status firewalld.service
+  932  exit
+  933  yum update
+  934  ping google.com
+  935  service network restart
+  936  systemctl status network.service
+  937  systemctl stop NetworkManager
+  938  systemctl disable NetworkManager
+  939  systemctl start network.service
+  940  systemctl start netcf-transaction.service
+  941  systemctl start network.service
+  942  systemctl
+  943  systemctl status network.service
+  944  systemctl status -1 network.service
+  945  systemctl status -l network.service
+  946  vi /etc/sysconfig/network
+  947  /usr/bin/systemctl restart network
+  948  /sbin/service network restart
+  949  vi /etc/sysconfig/network
+  950  ping www.google.com
+  951  reboot
+  952  vncserver
+  953  exit
+  954  service network restart
+  955  systemctl status network.service
+  956  vi /etc/sysconfig/
+  957  cd /etc/sysconfig/
+  958  ll
+  959  cd network-scripts/
+  960  ll
+  961  vi ifcfg-enp0s3
+  962  service network restart
+  963  service network stop
+  964  service network stop -l
+  965  service network start -l
+  966  service network start
+  967  service network status -l
+  968  journalctl -xe
+  969  service network restart
+  970  systemctl  status network.service
+  971  vi /etc/sysconfig/network-scripts/
+  972  cd /etc/sysconfig/network-scripts/
+  973  ll
+  974  vi ifcfg-enp0s3
+  975  cd
+  976  ifdown enp0s3
+  977  service network restart
+  978  systemctl status network.service
+  979  ifconfig enp0s3 up
+  980  systemctl status network.service
+  981  ifconfig enp0s3 up
+  982  service NetworkManager status
+  983  service NetworkManager start
+  984  chkconfig NetworkManager on
+  985  service NetworkManager status
+  986  vncserver
+  987  exit
+  988  ip address
+  989  vncserver
+  990  history

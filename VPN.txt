@@ -1,0 +1,28 @@
+
+
+downloading the binary(list)
+installation & configuration (run db config) 
+installation varification (work fine or not) 
+deply the sample application
+
+
+sn, tast, sub task, status, start, end
+
+
+
+
+
+
+
+tar -xvzf /u01/software/jdk-8u281-linux-aarch64.tar.gz
+
+1.8.0_282
+
+export JAVA_HOME=/opt/app/oracle/jdk1.8.0_282
+export JAVA_HOME=/opt/app/tuxedo/jdk1.8.0_281/jre/lib/i386/server
+
+export PATH=$JAVA_HOME/bin:$PATH
+echo $JAVA_HOME
+
+
+https://download.oracle.com/otn/java/jdk/8u281-b09/89d678f2be164786b292527658ca1605/jdk-8u281-linux-x64.tar.gz?AuthParam=1615202351_d3646edc66534ae55715793ecde8f07e

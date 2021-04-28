@@ -1,0 +1,413 @@
+[test@localhost ~]$
+login as: test
+test@192.168.0.125's password:
+Last login: Sat Mar  6 10:54:21 2021 from 192.168.5.1
+[test@localhost ~]$ cd /opt/
+[test@localhost opt]$ cd app/
+[test@localhost app]$ cd tuxedo/
+[test@localhost tuxedo]$ ls -ltr
+total 3346200
+-rw-r--r--.  1 root root        852 Aug 18  2015 env.ora
+drwxr-xr-x.  4 root root       4096 Mar 31  2016 Disk1
+-rw-r--r--.  1 root root       2927 Oct 14  2016 schagent.conf
+-rwxr-x---.  1 root root       1783 Mar  8  2017 runInstaller
+drwxr-x---. 14 root root       4096 Apr 12  2019 OPatch
+drwxr-x---.  7 root root       4096 Apr 17  2019 xdk
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 wwg
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 usm
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 suptools
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 srvm
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 sqlj
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 sqldeveloper
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 slax
+-rw-r-----.  1 root root         10 Apr 17  2019 root.sh.old.1
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 relnotes
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 racg
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 R
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 perl
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 owm
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 oss
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 ord
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 oracore
+drwxr-xr-x.  7 root root       4096 Apr 17  2019 opmn
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 olap
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 nls
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 mgw
+drwxr-xr-x.  9 root root       4096 Apr 17  2019 md
+drwxr-xr-x. 10 root root       4096 Apr 17  2019 ldap
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 has
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 dv
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 diagnostics
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 demo
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 dbjava
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 data
+drwxr-xr-x.  7 root root       4096 Apr 17  2019 cv
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 css
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 crs
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 plsql
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 dbs
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 utl
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 instantclient
+drwxr-xr-x. 13 root root       4096 Apr 17  2019 dmu
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 ucp
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 jdbc
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 QOpatch
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 ords
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 sdk
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 apex
+drwxr-xr-x.  8 root root       4096 Apr 17  2019 odbc
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 jlib
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 drdaas
+drwxr-xr-x. 11 root root       4096 Apr 17  2019 ctx
+-rwx------.  1 root root        786 Apr 17  2019 root.sh.old
+drwxr-xr-x. 10 root root       4096 Apr 17  2019 network
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 hs
+drwxr-xr-x.  9 root root       4096 Apr 17  2019 assistants
+drwxr-xr-x.  6 root root       4096 Apr 18  2019 sqlplus
+-rwx------.  1 root root        638 Apr 18  2019 root.sh
+drwxr-xr-x.  8 root root       4096 Apr 18  2019 oui
+drwxr-xr-x.  5 root root       4096 Apr 18  2019 deinstall
+drwxr-xr-x.  4 root root       4096 Apr 18  2019 clone
+drwxr-xr-x.  2 root root       4096 Apr 18  2019 addnode
+drwxr-xr-x.  4 root root       4096 Apr 18  2019 sqlpatch
+drwxr-xr-x. 13 root root       4096 Apr 18  2019 rdbms
+drwxr-xr-x.  6 root root       4096 Apr 18  2019 precomp
+drwxr-xr-x.  4 root root      16384 Apr 18  2019 lib
+drwxr-xr-x.  6 root root       4096 Apr 18  2019 jdk
+drwxr-xr-x.  8 root root       4096 Apr 18  2019 javavm
+drwxr-x---. 13 root root       4096 Apr 18  2019 inventory
+drwxr-xr-x.  2 root root       4096 Apr 18  2019 bin
+drwxr-xr-x. 10 root root       4096 Apr 18  2019 install
+-rw-r--r--.  1 root root  292273974 Mar  1 12:04 tuxedo122200_64_Linux_01_x86.zip
+-rw-r--r--.  1 root root 3059705302 Mar  4 18:52 LINUX.X64_193000_db_home.zip
+-rw-r--r--.  1 root root   74210643 Mar  5 11:51 jdk-8u281-linux-aarch64.tar.gz
+drwxr-xr-x.  8 root root       4096 Mar  5 13:04 jdk1.8.0_281
+[test@localhost tuxedo]$ cd Disk1/
+[test@localhost Disk1]$ cd install/
+[test@localhost install]$ ls -ltr
+total 476
+-rwxr-xr-x. 1 root root 145976 Mar 31  2016 unzip
+-rwxr-xr-x. 1 root root  21862 Mar 31  2016 runSSHSetup.sh
+-rwxr-xr-x. 1 root root  27781 Mar 31  2016 runInstaller.sh
+-rwxr-xr-x. 1 root root 172012 Mar 31  2016 runInstaller
+drwxr-xr-x. 2 root root   4096 Mar 31  2016 resource
+-rwxr-xr-x. 1 root root   6437 Mar 31  2016 oraparamsilent.ini
+-rwxr-xr-x. 1 root root   7115 Mar 31  2016 oraparam.ini
+-rwxr-xr-x. 1 root root   2245 Mar 31  2016 oneclick.properties
+-rwxr-xr-x. 1 root root  65037 Mar 31  2016 lsnodes
+-rwxr-xr-x. 1 root root    181 Mar 31  2016 detachHome.sh
+-rwxr-xr-x. 1 root root   2731 Mar 31  2016 console_install.jar
+-rwxr-xr-x. 1 root root   7499 Mar 31  2016 clusterparam.ini
+-rwxr-xr-x. 1 root root    275 Mar 31  2016 attachHome.sh
+-rwxr-xr-x. 1 root root     28 Mar 31  2016 addLangs.sh
+[test@localhost install]$ ./runInstaller.sh
+JAVA_HOME is not set
+[test@localhost install]$ export JAVA_HOME=/opt/app/tuxedo/jdk1.8.0_281
+[test@localhost install]$ export PATH=$JAVA_HOME/bin:$PATH
+[test@localhost install]$ ./runInstaller.sh
+./runInstaller.sh: line 90: [: -lt: unary operator expected
+Starting Oracle Universal Installer...
+
+Checking swap space: must be greater than 500 MB.   Actual 81919 MB    Passed
+Checking monitor: must be configured to display at least 256 colors
+    >>> Could not execute auto check for display colors using command /usr/bin/xdpyinfo. Check if the DISPLAY variable is set.    Failed <<<<
+
+Some requirement checks failed. You must fulfill these requirements before
+
+continuing with the installation,
+
+Continue? (y/n) [n] y
+
+
+>>> Ignoring required pre-requisite failures. Continuing...
+Preparing to launch Oracle Universal Installer from /tmp/OraInstall2021-03-06_12-18-02PM. Please wait ..../runInstaller.sh: line 1085: 24427 Segmentation fault      (core dumped) ./runInstaller -jreLoc $JAVA_HOME $*
+[test@localhost install]$ pwd
+/opt/app/tuxedo/Disk1/install
+[test@localhost install]$ cd ..
+[test@localhost Disk1]$ cd ..
+[test@localhost tuxedo]$ ls -ltr
+total 3346200
+-rw-r--r--.  1 root root        852 Aug 18  2015 env.ora
+drwxr-xr-x.  4 root root       4096 Mar 31  2016 Disk1
+-rw-r--r--.  1 root root       2927 Oct 14  2016 schagent.conf
+-rwxr-x---.  1 root root       1783 Mar  8  2017 runInstaller
+drwxr-x---. 14 root root       4096 Apr 12  2019 OPatch
+drwxr-x---.  7 root root       4096 Apr 17  2019 xdk
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 wwg
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 usm
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 suptools
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 srvm
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 sqlj
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 sqldeveloper
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 slax
+-rw-r-----.  1 root root         10 Apr 17  2019 root.sh.old.1
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 relnotes
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 racg
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 R
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 perl
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 owm
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 oss
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 ord
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 oracore
+drwxr-xr-x.  7 root root       4096 Apr 17  2019 opmn
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 olap
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 nls
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 mgw
+drwxr-xr-x.  9 root root       4096 Apr 17  2019 md
+drwxr-xr-x. 10 root root       4096 Apr 17  2019 ldap
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 has
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 dv
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 diagnostics
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 demo
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 dbjava
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 data
+drwxr-xr-x.  7 root root       4096 Apr 17  2019 cv
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 css
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 crs
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 plsql
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 dbs
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 utl
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 instantclient
+drwxr-xr-x. 13 root root       4096 Apr 17  2019 dmu
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 ucp
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 jdbc
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 QOpatch
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 ords
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 sdk
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 apex
+drwxr-xr-x.  8 root root       4096 Apr 17  2019 odbc
+drwxr-xr-x.  2 root root       4096 Apr 17  2019 jlib
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 drdaas
+drwxr-xr-x. 11 root root       4096 Apr 17  2019 ctx
+-rwx------.  1 root root        786 Apr 17  2019 root.sh.old
+drwxr-xr-x. 10 root root       4096 Apr 17  2019 network
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 hs
+drwxr-xr-x.  9 root root       4096 Apr 17  2019 assistants
+drwxr-xr-x.  6 root root       4096 Apr 18  2019 sqlplus
+-rwx------.  1 root root        638 Apr 18  2019 root.sh
+drwxr-xr-x.  8 root root       4096 Apr 18  2019 oui
+drwxr-xr-x.  5 root root       4096 Apr 18  2019 deinstall
+drwxr-xr-x.  4 root root       4096 Apr 18  2019 clone
+drwxr-xr-x.  2 root root       4096 Apr 18  2019 addnode
+drwxr-xr-x.  4 root root       4096 Apr 18  2019 sqlpatch
+drwxr-xr-x. 13 root root       4096 Apr 18  2019 rdbms
+drwxr-xr-x.  6 root root       4096 Apr 18  2019 precomp
+drwxr-xr-x.  4 root root      16384 Apr 18  2019 lib
+drwxr-xr-x.  6 root root       4096 Apr 18  2019 jdk
+drwxr-xr-x.  8 root root       4096 Apr 18  2019 javavm
+drwxr-x---. 13 root root       4096 Apr 18  2019 inventory
+drwxr-xr-x.  2 root root       4096 Apr 18  2019 bin
+drwxr-xr-x. 10 root root       4096 Apr 18  2019 install
+-rw-r--r--.  1 root root  292273974 Mar  1 12:04 tuxedo122200_64_Linux_01_x86.zip
+-rw-r--r--.  1 root root 3059705302 Mar  4 18:52 LINUX.X64_193000_db_home.zip
+-rw-r--r--.  1 root root   74210643 Mar  5 11:51 jdk-8u281-linux-aarch64.tar.gz
+drwxr-xr-x.  8 root root       4096 Mar  5 13:04 jdk1.8.0_281
+[test@localhost tuxedo]$ find. -name oracle
+bash: find.: command not found...
+Similar command is: 'find'
+[test@localhost tuxedo]$ find . -name oracle
+find: ‘./oui/bin/resource’: Permission denied
+find: ‘./oui/prov/resources/scripts’: Permission denied
+find: ‘./network/log’: Permission denied
+find: ‘./network/trace’: Permission denied
+./ords/docs/javadoc/plugin-api/oracle
+./bin/oracle
+./apex/images/libraries/jquery-ui/1.12.0/ui/i18n/oracle
+./apex/images/libraries/jquery-ui/1.10.4/ui/i18n/oracle
+./apex/images/themes/oracle
+./apex/utilities/oracle
+find: ‘./inventory’: Permission denied
+find: ‘./xdk’: Permission denied
+find: ‘./OPatch’: Permission denied
+find: ‘./opmn/conf’: Permission denied
+[test@localhost tuxedo]$ ^C
+[test@localhost tuxedo]$ unzip ^C
+[test@localhost tuxedo]$ unzip LINUX.X64_193000_db_home.zip
+Archive:  LINUX.X64_193000_db_home.zip
+replace drdaas/admin/drdasqtt_translator_setup.sql? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+error:  cannot delete old drdaas/admin/drdasqtt_translator_setup.sql
+        Permission denied
+replace drdaas/admin/drdapkg_db2.sql? [y]es, [n]o, [A]ll, [N]one, [r]ename: ^Z
+[1]+  Stopped                 unzip LINUX.X64_193000_db_home.zip
+[test@localhost tuxedo]$ unzip LINUX.X64_193000_db_home.zip
+Archive:  LINUX.X64_193000_db_home.zip
+replace drdaas/admin/drdasqtt_translator_setup.sql? [y]es, [n]o, [A]ll, [N]one, [r]ename: ^Z
+[2]+  Stopped                 unzip LINUX.X64_193000_db_home.zip
+[test@localhost tuxedo]$ ls -ltr
+total 3346200
+-rw-r--r--.  1 root root        852 Aug 18  2015 env.ora
+drwxr-xr-x.  4 root root       4096 Mar 31  2016 Disk1
+-rw-r--r--.  1 root root       2927 Oct 14  2016 schagent.conf
+-rwxr-x---.  1 root root       1783 Mar  8  2017 runInstaller
+drwxr-x---.  7 root root       4096 Apr 17  2019 xdk
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 wwg
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 usm
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 suptools
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 srvm
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 sqlj
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 sqldeveloper
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 slax
+-rw-r-----.  1 root root         10 Apr 17  2019 root.sh.old.1
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 relnotes
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 racg
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 R
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 perl
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 owm
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 oss
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 ord
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 oracore
+drwxr-xr-x.  7 root root       4096 Apr 17  2019 opmn
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 olap
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 nls
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 mgw
+drwxr-xr-x.  9 root root       4096 Apr 17  2019 md
+drwxr-xr-x. 10 root root       4096 Apr 17  2019 ldap
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 has
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 dv
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 diagnostics
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 demo
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 dbjava
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 data
+drwxr-xr-x.  7 root root       4096 Apr 17  2019 cv
+drwxr-xr-x.  3 root root       4096 Apr 17  2019 css
+drwxr-xr-x.  6 root root       4096 Apr 17  2019 crs
+drwxr-xr-x.  4 root root       4096 Apr 17  2019 drdaas
+drwxr-xr-x. 11 root root       4096 Apr 17  2019 ctx
+-rwx------.  1 root root        786 Apr 17  2019 root.sh.old
+drwxr-xr-x. 10 root root       4096 Apr 17  2019 network
+drwxr-xr-x.  5 root root       4096 Apr 17  2019 hs
+drwxr-xr-x.  9 root root       4096 Apr 17  2019 assistants
+drwxr-xr-x.  6 root root       4096 Apr 18  2019 sqlplus
+-rwx------.  1 root root        638 Apr 18  2019 root.sh
+drwxr-xr-x. 13 root root       4096 Apr 18  2019 rdbms
+drwxr-xr-x.  6 root root       4096 Apr 18  2019 precomp
+drwxr-xr-x.  8 root root       4096 Apr 18  2019 javavm
+-rw-r--r--.  1 root root  292273974 Mar  1 12:04 tuxedo122200_64_Linux_01_x86.zip
+-rwxr-xr-x.  1 root root 3059705302 Mar  4 18:52 LINUX.X64_193000_db_home.zip
+-rw-r--r--.  1 root root   74210643 Mar  5 11:51 jdk-8u281-linux-aarch64.tar.gz
+drwxr-xr-x.  8 root root       4096 Mar  5 13:04 jdk1.8.0_281
+drwxr-xr-x.  2 root root       4096 Mar  6 12:26 instantclient
+drwxr-xr-x.  4 root root       4096 Mar  6 12:29 clone
+drwxr-xr-x.  6 root root       4096 Mar  6 12:30 jdk
+drwxr-xr-x.  4 root root       4096 Mar  6 12:30 sqlpatch
+drwxr-xr-x.  2 root root       4096 Mar  6 12:30 QOpatch
+drwxr-xr-x.  8 root root       4096 Mar  6 12:30 oui
+drwxr-xr-x. 13 root root       4096 Mar  6 12:30 dmu
+drwxr-xr-x.  5 root root       4096 Mar  6 12:30 deinstall
+drwxr-xr-x.  8 root root       4096 Mar  6 12:30 odbc
+drwxr-xr-x.  3 root root       4096 Mar  6 12:30 ucp
+drwxr-xr-x.  2 root root       4096 Mar  6 12:30 utl
+drwxr-xr-x.  4 root root       4096 Mar  6 12:30 ords
+drwxr-xr-x.  5 root root       4096 Mar  6 12:30 sdk
+drwxr-x---. 14 root root       4096 Mar  6 12:30 OPatch
+drwxr-xr-x.  2 root root       4096 Mar  6 12:30 addnode
+drwxr-xr-x.  2 root root       4096 Mar  6 12:30 jlib
+drwxr-xr-x.  6 root root       4096 Mar  6 12:30 plsql
+drwxr-x---. 13 root root       4096 Mar  6 12:30 inventory
+drwxr-xr-x.  6 root root       4096 Mar  6 12:30 apex
+drwxr-xr-x.  2 root root       4096 Mar  6 12:30 dbs
+drwxr-xr-x.  3 root root       4096 Mar  6 12:30 jdbc
+drwxr-xr-x. 10 root root       4096 Mar  6 12:31 install
+drwxr-xr-x.  2 root root       4096 Mar  6 12:31 bin
+drwxr-xr-x.  4 root root      16384 Mar  6 12:31 lib
+[test@localhost tuxedo]$ ./runInstaller
+-bash: ./runInstaller: Permission denied
+[test@localhost tuxedo]$ ./runInstaller
+./runInstaller: line 57: /opt/app/tuxedo/bin/commonSetup.sh: Permission denied
+[test@localhost tuxedo]$ ./runInstaller
+./runInstaller: line 57: /opt/app/tuxedo/bin/commonSetup.sh: Permission denied
+[test@localhost tuxedo]$ ./runInstaller
+ERROR: Unable to verify the graphical display setup. This application requires X display. Make sure that xdpyinfo exist under PATH variable.
+ERROR: Unable to continue with the setup. Ensure user (test) has execution permission over software home (/opt/app/tuxedo).
+[test@localhost tuxedo]$ ^C
+[test@localhost tuxedo]$ ./runInstaller
+ERROR: Unable to verify the graphical display setup. This application requires X display. Make sure that xdpyinfo exist under PATH variable.
+
+ERROR: Ensure that the Oracle Database software image files at (/opt/app/tuxedo) are not owned by root.
+[test@localhost tuxedo]$ ^C
+[test@localhost tuxedo]$
+login as: test
+test@192.168.0.125's password:
+Access denied
+test@192.168.0.125's password:
+Access denied
+test@192.168.0.125's password:
+Last failed login: Sat Mar  6 13:40:01 IST 2021 from 192.168.5.3 on ssh:notty
+There were 2 failed login attempts since the last successful login.
+Last login: Sat Mar  6 12:14:02 2021 from 192.168.5.3
+[test@localhost ~]$ echo $DISPLAY
+
+[test@localhost ~]$
+[test@localhost ~]$
+[test@localhost ~]$ echo $DISPLAY
+
+[test@localhost ~]$ echo $DISPLAY
+
+[test@localhost ~]$ export DISPLAY=:0
+[test@localhost ~]$
+[test@localhost ~]$
+[test@localhost ~]$
+[test@localhost ~]$
+[test@localhost ~]$
+[test@localhost ~]$ Type a message
+bash: Type: command not found...
+[test@localhost ~]$ cd /opt/
+[test@localhost opt]$ cd app/tuxedo/
+[test@localhost tuxedo]$ ./runInstaller
+
+ERROR: Ensure that the Oracle Database software image files at (/opt/app/tuxedo) are not owned by root.
+[test@localhost tuxedo]$
+[test@localhost tuxedo]$
+[test@localhost tuxedo]$ ./runInstaller
+Launching Oracle Database Setup Wizard...
+login as: test
+test@192.168.0.125's password:
+Last login: Sat Mar  6 13:40:12 2021 from 192.168.5.3
+[test@localhost ~]$ ./runInstaller
+-bash: ./runInstaller: No such file or directory
+[test@localhost ~]$ cd /opt/
+[test@localhost opt]$ cd app/
+[test@localhost app]$ cd tuxedo/
+[test@localhost tuxedo]$ ./runInstaller
+ERROR: Unable to verify the graphical display setup. This application requires X display. Make sure that xdpyinfo exist under PATH variable.
+
+No X11 DISPLAY variable was set, but this program performed an operation which requires it.
+[test@localhost tuxedo]$ echo $DISPLAY
+
+[test@localhost tuxedo]$ export DISPLAY=:0
+[test@localhost tuxedo]$ ./runInstaller
+Launching Oracle Database Setup Wizard...
+login as: test
+test@192.168.0.125's password:
+Last login: Sat Mar  6 14:18:19 2021 from 192.168.5.3
+[test@localhost ~]$ export DISPLAY=:0
+[test@localhost ~]$ ./runInstaller
+-bash: ./runInstaller: No such file or directory
+[test@localhost ~]$ cd /opt/
+[test@localhost opt]$ cd app/tuxedo/
+[test@localhost tuxedo]$ ./runInstaller
+Launching Oracle Database Setup Wizard...
+
+
+
+
+
+
+
+
+
+
+^Z
+[1]+  Stopped                 ./runInstaller
+[test@localhost tuxedo]$ ./runInstaller
+Launching Oracle Database Setup Wizard...
+
+
+^Z
+[2]+  Stopped                 ./runInstaller
+[test@localhost tuxedo]$ ./runInstaller
+Launching Oracle Database Setup Wizard...
+login as: test
+test@192.168.0.125's password:
+Last login: Sat Mar  6 14:34:37 2021 from 192.168.5.3
+[test@localhost ~]$

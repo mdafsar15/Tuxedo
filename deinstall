@@ -1,0 +1,295 @@
+#!/bin/sh
+#
+# $Header: install/utl/scripts/db/deinstall.pp /main/20 2016/09/14 03:54:04 ambagraw Exp $
+#
+# Copyright (c) 2005, 2016, Oracle and/or its affiliates. All rights reserved.
+#
+#    NAME
+#      deinstall - wrapper script that calls deinstall tool.
+#
+#    DESCRIPTION
+#      This script will set all the necessary variables and call the tools
+#      entry point.
+#
+#    NOTES
+#      <other useful comments, qualifications, etc.>
+#
+#    MODIFIED   (MM/DD/YY)
+#    supalava  09/07/15 - lrg 18419953 fix - Remove perl dir deletion code.
+#    ambagraw  08/20/15 - Bug 21662645: Defining RM Command
+#    ambagraw  07/29/15 - Bug 21485879 : Removing PERL Directory from deinstall
+#                         BOOTSTRAP area
+#    ambagraw  07/16/15 - Bug 21382334 : Including Check for invalid bootstarp
+#                         tmp dir in case of deinstall tmpdir option..
+#    davjimen  03/31/15 - check if the oraInst.loc file exists
+#    ntarale 	 02/25/14 - fix for lrg 11471681.
+#    ntarale 	 02/10/13 - fix for bug# 18219019 
+#    haagrawa    09/16/13 - fix for bug# 17450327
+#    gramamur    07/02/12 - Maintain single bootstrap for OH and SH based
+#                           deinstall -dont call bootstrap.pl for SH based
+#                           deinstall
+#    gramamur    06/29/12 - XbranchMerge gramamur_bug-14252929 from
+#                           st_install_12.1beta2
+#    rmallego    06/28/12 - passing TOOL_DIR to bootstrap.pl
+#    huliliu     06/28/11 - change test equal from == to = for HP platforms
+#    huliliu     05/23/11 - add special handle for -help option bug 12552180
+#    scravind    03/02/11 - Doing changes to architecture computation logic for
+#                           bug 11740319
+#    ssampath    09/16/10 - XbranchMerge ssampath_bug-10033702 from
+#                           st_install_11.2.0
+#    ssampath    08/26/10 - Add back checkUser() function
+#    mwidjaja    04/29/10 - XbranchMerge mwidjaja_bug-9579184 from
+#                           st_install_11.2.0.1.0
+#    mwidjaja    04/15/10 - Added SHLIB_PATH for HP-PARISC
+#    mwidjaja    01/14/10 - XbranchMerge mwidjaja_bug-9269768 from
+#                           st_install_11.2.0.1.0
+#    mwidjaja    01/14/10 - Fix help message for params
+#    ssampath    12/24/09 - Fix for bug 9227535. Remove legacy version_check
+#                           function
+#    ssampath    12/01/09 - XbranchMerge ssampath_bug-9167533 from
+#                           st_install_11.2.0.1.0
+#    ssampath    11/30/09 - Set umask to 022.
+#    prsubram    10/12/09 - XbranchMerge prsubram_bug-9005648 from main
+#    prsubram    10/08/09 - Compute ARCHITECTURE_FLAG in the script
+#    prsubram    09/15/09 - Setting LIBPATH for AIX
+#    prsubram    09/10/09 - Add AIX specific code check java version
+#    prsubram    09/10/09 - Change TOOL_DIR to BOOTSTRAP_DIR in java cmd
+#                           invocation of bug#8874160
+#    prsubram    09/08/09 - Change the default shell to /usr/xpg4/bin/sh on
+#                           SunOS
+#    prsubram    09/03/09 - Removing -d64 for client32 homes for the bug8859294
+#    prsubram    06/22/09 - Resolve port specific id cmd issue
+#    ssampath    06/02/09 - Fix for bug 8566942
+#    ssampath    05/19/09 - Move removal of /tmp/deinstall<timestamp> to java
+#                           code.
+#    prsubram    04/30/09 - Fix for the bug#8474891
+#    mwidjaja    04/29/09 - Added user check between the user running the
+#                           script and inventory owner
+#    ssampath    04/29/09 - Changes to make error message better when deinstall
+#                           tool is invoked from inside ORACLE_HOME and -home
+#                           is passed.
+#    ssampath    04/15/09 - Fix for bug 8414555
+#    prsubram    04/09/09 - LD_LIBRARY_PATH is ported for sol,hp-ux & aix
+#    mwidjaja    03/26/09 - Disallow -home for running from OH
+#    ssampath    03/24/09 - Fix for bug 8339519
+#    wyou        02/25/09 - restructure the ohome check
+#    wyou        02/25/09 - change the error msg for directory existance check
+#    wyou        02/12/09 - add directory existance check
+#    wyou        02/09/09 - add the check for the writablity for the oracle
+#                           home passed-in
+#    ssampath    01/21/09 - Add oui/lib to LD_LIBRARY_PATH
+#    poosrini    01/07/09 - LOG related changes
+#    ssampath    11/24/08 - Create /main/osds/unix branch
+#    dchriste    10/30/08 - eliminate non-generic tools like 'cut'
+#    ssampath    08/18/08 - Pickup srvm.jar from JLIB directory.
+#    ssampath    07/30/08 - Add http_client.jar and OraCheckpoint.jar to
+#                           CLASSPATH
+#    ssampath    07/08/08 - assistantsCommon.jar and netca.jar location has
+#                           changed.
+#    ssampath    04/11/08 - If invoking the tool from installed home, JRE_HOME
+#                           should be set to $OH/jdk/jre.
+#    ssampath    04/09/08 - Add logic to instantiate ORA_CRS_HOME, JAVA_HOME
+#                           etc.,
+#    ssampath    04/03/08 - Pick up ldapjclnt11.jar
+#    idai        04/03/08 - remove assistantsdc.jar and netcadc.jar
+#    bktripat    02/23/07 - 
+#    khsingh     07/18/06 - add osdbagrp fix 
+#    khsingh     07/07/06 - fix regression 
+#    khsingh     06/20/06 - fix bug 5228203 
+#    bktripat    06/12/06 - Fix for bug 5246802 
+#    bktripat    05/08/06 - 
+#    khsingh     05/08/06 - fix tool to run from any parent directory
+#    khsingh     05/08/06 - fix LD_LIBRARY_PATH to have abs. path 
+#    ssampath    05/01/06 - Fix for bug 5198219
+#    bktripat    04/21/06 - Fix for bug 5074246 
+#    khsingh     04/11/06 - fix bug 5151658
+#    khsingh     04/08/06 - Add WA for bugs 5006414 & 5093832
+#    bktripat    02/08/06 - Fix for bug 5024086 & 5024061 
+#    bktripat    01/24/06 - 
+#    mstalin     01/23/06 - Add lib to pick libOsUtils.so 
+#    bktripat    01/19/06 - adding library changes 
+#    rahgupta    01/19/06 - 
+#    bktripat    01/19/06 - 
+#    mstalin     01/17/06 - Modify the assistants deconfig jar file name 
+#    rahgupta    01/17/06 - updating emcp classpath 
+#    khsingh     01/17/06 - export ORACLE_HOME 
+#    khsingh     01/17/06 - fix for CRS deconfig. 
+#    hying       01/17/06 - netcadc.jar
+#    bktripat    01/16/06 - 
+#    ssampath    01/16/06 - 
+#    bktripat    01/11/06 - 
+#    clo         01/10/06 - add EMCP entries
+#    hying       01/10/06 - netcaDeconfig.jar
+#    mstalin     01/09/06 - Add OraPrereqChecks.jar 
+#    mstalin     01/09/06 - 
+#    khsingh     01/09/06 - 
+#    mstalin     01/09/06 - Add additional jars for assistants 
+#    ssampath    01/09/06 - removing parseOracleHome temporarily 
+#    ssampath    01/09/06 - 
+#    khsingh     01/08/06 - fix for CRS deconfig
+#    ssampath    12/08/05 - added java version check
+#    ssampath    12/08/05 - initial run,minor bugs fixed 
+#    ssampath    12/07/05 - Creation
+#
+
+#MACROS
+
+if [ x"$UNAME" = "x" ]; then UNAME="/bin/uname"; fi
+if [ x"$ECHO" = "x" ]; then ECHO="/bin/echo"; fi
+if [ x"$AWK" = "x" ]; then AWK="/bin/awk"; fi
+if [ x"$IDCMD" = "x" ]; then IDCMD="/usr/bin/id"; fi
+if [ x"$DIRNAME" = "x" ]; then DIRNAME="/usr/bin/dirname"; fi
+if [ x"$FILE" = "x" ]; then FILE="/usr/bin/file"; fi
+if [ x"$LS" = "x" ]; then LS="/bin/ls"; fi
+if [ x"$RM" = "x" ]; then RM="/bin/rm"; fi
+
+if [ "`$UNAME`" = "SunOS" ]
+then
+    if [ -z "${_xpg4ShAvbl_deconfig}" ]
+    then
+        _xpg4ShAvbl_deconfig=1
+        export _xpg4ShAvbl_deconfig
+        /usr/xpg4/bin/sh $0 "$@"
+        exit $?
+    fi
+        AWK="/usr/xpg4/bin/awk"
+fi 
+
+# Set umask to 022 always.
+umask 022
+
+INSTALLED_VERSION_FLAG=true
+#Setting the architecture of the shiphome
+ARCHITECTURE=64
+JAVAD64_FLAG=$ARCHITECTURE
+
+TOOL_ARGS=$* # initialize this always.
+
+# Since the OTN and the installed version of the tool is same, only way to 
+# differentiate is through the instantated variable ORA_CRS_HOME.  If it is 
+# NOT instantiated, then the tool is a downloaded version.
+# Set HOME_VER to true based on the value of $INSTALLED_VERSION_FLAG
+if [ x"$INSTALLED_VERSION_FLAG" = x"true" ]
+then
+   ORACLE_HOME=/opt/app/oracle/product/19.3.0
+   HOME_VER=1     # HOME_VER
+   TOOL_ARGS="$ORACLE_HOME $TOOL_ARGS"
+else
+   HOME_VER=0
+fi
+
+# Save current working directory
+CURR_DIR=`pwd`
+
+# If CURR_DIR is different from TOOL_DIR get that location and cd into it.
+TOOL_REL_PATH=`$DIRNAME $0`
+cd $TOOL_REL_PATH
+
+DOT=`$ECHO $TOOL_REL_PATH | $AWK -F'/' '{ print $1}'`
+
+if [ "$DOT" = "." ];
+then
+  TOOL_DIR=$CURR_DIR/$TOOL_REL_PATH
+elif [ `expr "$DOT" : '.*'` -gt 0 ];
+then
+  TOOL_DIR=$CURR_DIR/$TOOL_REL_PATH
+else
+  TOOL_DIR=$TOOL_REL_PATH
+fi
+
+# Check if this script is run as root.  If so, then error out.
+# This is fix for bug 5024086.
+
+RUID=`$IDCMD|$AWK -F\( '{print $2}'|$AWK -F\) '{print $1}'`
+if [ x"$RUID" = "xroot" ];then
+ $ECHO "You must not be logged in as root to run $0."
+ $ECHO "Log in as Oracle user and rerun $0."
+ exit $ROOT_USER
+fi
+
+# DEFINE FUNCTIONS BELOW
+
+checkUser ()
+{
+   if [ x"$ORACLE_HOME" != "x" ]; then
+     if [ "`$UNAME`" = "AIX" ]
+	then
+     	  owner=`$LS -ldX $ORACLE_HOME/inventory | $AWK '{print $3}'`
+	else
+	  owner=`$LS -ld $ORACLE_HOME/inventory | $AWK '{print $3}'`
+     fi
+     id=`$IDCMD | $AWK -F\( '{print $2}' | $AWK -F\) '{print $1}'`
+     if [ "$owner" != "$id" ] 
+      then
+         echo "ERROR: Oracle home not owned by user."
+         echo "The user running the deinstall tool is not the same as owner of Oracle home"
+         echo "based on inventory ownership."
+         echo "You must run this tool as the same user who installed the software."
+         exit 1
+      fi
+   fi
+}
+
+checkRegisteredHome () {
+  if [ ! -e ${ORACLE_HOME}/oraInst.loc ]; then
+    echo "ERROR: This Oracle home does not seem to be registered.";
+    echo "Deinstall tool cannot proceed.";
+    exit 1;
+  fi
+}
+
+computeArchFlag() {
+#Computing the JAVAD64 flag based on the SHIPHOME_ARCHITECTURE flag
+   if [ x"$ARCHITECTURE" = x"64" ];then
+      JAVAD64_FLAG="-d64"
+   fi
+}
+
+if [ $# -gt 0 ]; then
+  if [ $1 = "-help" ];then
+   if [ $HOME_VER = 1 ];then
+      # check if home is registered
+      checkRegisteredHome
+      $ORACLE_HOME/perl/bin/perl $ORACLE_HOME/deinstall/deinstall.pl 1 $HOME_VER
+   else
+      $TOOL_DIR/perl/bin/perl $TOOL_DIR/deinstall.pl 1 $HOME_VER
+   fi
+   exit 0
+  fi
+fi
+
+if [ $HOME_VER = 1 ];
+then
+
+   # check if home is registered
+   checkRegisteredHome
+   
+   # Fix for bug 10033702
+   # Check to verify ownership of the user running the tool needs to be done 
+   # before any perl invocation.  
+ 
+   checkUser
+   $ECHO "Checking for required files and bootstrapping ..."
+   $ECHO "Please wait ..."
+   TEMP_LOC=`$ORACLE_HOME/perl/bin/perl $ORACLE_HOME/deinstall/bootstrap.pl $HOME_VER $TOOL_ARGS`
+   RET_VAL=$?
+   if [ $RET_VAL -gt 0 ];then
+      $ECHO $RET_VAL
+      exit $RET_VAL
+   fi 
+   if [ -z $TEMP_LOC ];then
+      $ECHO "Invalid tmp directory"
+      exit
+   fi
+   TOOL_DIR=$TEMP_LOC
+else
+   # In case of SH based deinstall, TEMP_LOC and TOOL_DIR are same
+   # Also, don't call bootstrap.pl for SH based deinstall so that we can avoid
+   # creating second level of bootstrap.
+   TEMP_LOC=$TOOL_DIR
+fi
+
+computeArchFlag
+
+$TOOL_DIR/perl/bin/perl $TOOL_DIR/deinstall.pl 0 $HOME_VER  $TOOL_DIR $TOOL_DIR $JAVAD64_FLAG $TOOL_ARGS
+

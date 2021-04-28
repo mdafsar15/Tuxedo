@@ -1,0 +1,7 @@
+https://www.oracle.com/downloads/samplecode/tuxedo-samplecode-downloads.html ====> TUXEDO APPLICATION
+https://docs.oracle.com/cd/E13203_01/tuxedo/tux80/atmi/intatm24.htm	=========> LOAD BALANCING
+https://docs.oracle.com/cd/E13203_01/tuxedo/tux80/atmi/addomc23.htm	=========> Configuring Failover and Failback in a Domains Environment
+https://docs.oracle.com/cd/E13222_01/wls/docs91/wtc_admin/Cluster.html#1112009	===> How to Manage WebLogic Tuxedo Connector in a Clustered Environment
+https://docs.oracle.com/cd/E13222_01/wls/docs91/cluster/index.html		===> Using WebLogic Server Clusters
+https://docs.oracle.com/cd/E13203_01/tuxedo/tux71/html/intbas2.htm	===========> What Is the BEA Tuxedo System
+https://docs.oracle.com/cd/E35855_01/tuxedo/docs12c/pgj/pgsmp.html	===========> Implementing Services in Oracle Tuxedo Java Server

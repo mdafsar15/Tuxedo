@@ -1,0 +1,102 @@
+/opt/app/appl/oracle/wls1212/user_projects/domains/base_domain/nodemanager
+
+
+WseeJaxwsFileStore_auto_1
+WseeJaxwsFileStore_auto_2
+WseeFileStore_auto_1
+WseeFileStore_auto_2
+WseeSoapjmsFileStore_auto_1
+WseeSoapjmsFileStore_auto_2
+
+script=/opt/app/appl/oracle/wls1212/user_projects/domains/base_domain/bin
+
+
+weblogic.wsee.BufferedResponseQueue
+<Mar 14, 2021 12:09:00,099 PM IST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RESUMING.> 
+<Mar 14, 2021 12:09:00,138 PM IST> <Notice> <WebLogicServer> <BEA-000331> <Started the WebLogic Server Administration Server "AdminServer" for domain "base_domain" running in development mode.> 
+<Mar 14, 2021 12:09:00,138 PM IST> <Notice> <Server> <BEA-002613> <Channel "Default" is now listening on 192.168.0.125:7001 for protocols iiop, t3, ldap, snmp, http.> 
+<Mar 14, 2021 12:09:00,139 PM IST> <Notice> <Server> <BEA-002613> <Channel "Default" is now listening on 192.168.0.125:7001 for protocols iiop, t3, ldap, snmp, http.> 
+<Mar 14, 2021 12:09:00,144 PM IST> <Notice> <WebLogicServer> <BEA-000360> <The server started in RUNNING mode.> 
+<Mar 14, 2021 12:09:00,152 PM IST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RUNNING.> 
+
+
+
+
+
+
+
+
+[oracle@srv1 bin]$ ps -ef | grep m-i java
+grep: java: No such file or directory
+[oracle@srv1 bin]$ ps -ef | grep -i java
+oracle   10346     1  0 12:08 pts/0    00:00:00 /opt/app/3psw/jdk1.8.0_281/bin/java -Dderby.system.home=/opt/app/appl/oracle/wls1212/user_projects/domains/base_domain/common/db -classpath /opt/app/appl/oracle/wls1212/wlserver/common/derby/lib/derby.jar:/opt/app/appl/oracle/wls1212/wlserver/common/derby/lib/derbynet.jar:/opt/app/appl/oracle/wls1212/wlserver/common/derby/lib/derbytools.jar:/opt/app/appl/oracle/wls1212/wlserver/common/derby/lib/derbyclient.jar org.apache.derby.drda.NetworkServerControl start
+oracle   10347 10290  3 12:08 pts/0    00:00:21 /opt/app/3psw/jdk1.8.0_281/bin/java -server -Xms256m -Xmx512m -XX:CompileThreshold=8000 -cp /opt/app/appl/oracle/wls1212/wlserver/server/lib/weblogic-launcher.jar -Dlaunch.use.env.classpath=true -Dweblogic.Name=AdminServer -Djava.security.policy=/opt/app/appl/oracle/wls1212/wlserver/server/lib/weblogic.policy -Djava.system.class.loader=com.oracle.classloader.weblogic.LaunchClassLoader -javaagent:/opt/app/appl/oracle/wls1212/wlserver/server/lib/debugpatch-agent.jar -da -Dwls.home=/opt/app/appl/oracle/wls1212/wlserver/server -Dweblogic.home=/opt/app/appl/oracle/wls1212/wlserver/server weblogic.Server
+oracle   11098  5743  0 12:17 pts/0    00:00:00 grep --color=auto -i java
+[oracle@srv1 bin]$ ps -ef | grep -i start
+gdm       1891  1886  0 Mar11 ?        00:00:00 /usr/libexec/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm       1896     1  0 Mar11 ?        00:00:00 dbus-launch --exit-with-session /usr/libexec/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm       1983     1  0 Mar11 ?        00:00:00 /usr/bin/pulseaudio --start --log-target=syslog
+root      2449     1  0 Mar11 ?        00:00:00 /bin/sh /root/.vnc/xstartup
+root      2614     1  0 Mar11 ?        00:00:00 /usr/bin/gnome-keyring-daemon --start --components=ssh
+root      2781     1  0 Mar11 ?        00:00:01 /usr/bin/pulseaudio --start
+oracle   10290  5743  0 12:08 pts/0    00:00:00 /bin/sh ./startWebLogic.sh
+oracle   10346     1  0 12:08 pts/0    00:00:00 /opt/app/3psw/jdk1.8.0_281/bin/java -Dderby.system.home=/opt/app/appl/oracle/wls1212/user_projects/domains/base_domain/common/db -classpath /opt/app/appl/oracle/wls1212/wlserver/common/derby/lib/derby.jar:/opt/app/appl/oracle/wls1212/wlserver/common/derby/lib/derbynet.jar:/opt/app/appl/oracle/wls1212/wlserver/common/derby/lib/derbytools.jar:/opt/app/appl/oracle/wls1212/wlserver/common/derby/lib/derbyclient.jar org.apache.derby.drda.NetworkServerControl start
+oracle   11115  5743  0 12:18 pts/0    00:00:00 grep --color=auto -i start
+[oracle@srv1 bin]$ ps -ef | grep -i start*
+[oracle@srv1 bin]$ ^C
+[oracle@srv1 bin]$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+####<Mar 14, 2021 12:09:00,144 PM IST> <Notice> <WebLogicServer> <srv1.localdomain> <AdminServer> <[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <6969356f-f6fd-4d8a-aa1e-50af3338207a-0000000f> <1615703940144> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000360> <The server started in RUNNING mode.> 
+####<Mar 14, 2021 12:09:00,152 PM IST> <Notice> <WebLogicServer> <srv1.localdomain> <AdminServer> <[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'> <<WLS Kernel>> <> <6969356f-f6fd-4d8a-aa1e-50af3338207a-0000000f> <1615703940152> <[severity-value: 32] [rid: 0] [partition-id: 0] [partition-name: DOMAIN] > <BEA-000365> <Server state changed to RUNNING.> 
+
+
+
+/opt/app/appl/oracle/wls1212/user_projects/domains/base_domain/servers/AdminServer/logs
+
+{WL_HOME}/server/bin
+192.168.0.1
+
+
+
+
+
+
+
+source ~/.bash_profile
+
+
+ export APPDIR=/opt/app/atmi
+ 1126  export TUXDIR=/opt/app/TuxedoHome/tuxedo12.1.3.0.0
+ 1127  export PATH=$PATH:$TUXDIR/bin
+ 1128  export TUXCONFIG=$APPDIR/tuxconfig
+ 1129  LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TUXDIR/lib
+ 1130  export TUXDIR TUXCONFIG PATH LD_LIBRARY_PATH
+
+
+uid=54321
+
+/opt/app/appl/oracle/wls1212/user_projects/domains/base_domain/bin
+
+
+I changed the network setting for my VM's network adapter to a bridged adapter and yum was able to install.

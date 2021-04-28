@@ -1,0 +1,37 @@
+crdl -z config -b blocks
+TMADMIN_CAT:1293: ERROR: -z option must be an absolute pathname.
+
+crdl -z config -b blocks
+crdl -z "/opt/app/atmi/TLOG" -b 1024
+
+
+[oracle@Tuxedo atmi]$ tmboot -y
+Booting all admin and server processes in /opt/app/atmi/simpserv
+INFO: Oracle Tuxedo, Version 12.1.3.0.0, 64-bit, Patch Level (none)
+
+Booting admin processes ...
+
+exec BBL -A :
+        process id=4827 ... Started.
+
+Booting server processes ...
+
+exec Tuxedo -A :
+        CMDTUX_CAT:816: ERROR: Cannot exec, executable file not found
+1 process started.
+[oracle@Tuxedo atmi]$ ps -ef | grep -i bbl
+oracle    4827     1  0 17:24 pts/0    00:00:00 BBL -C dom=simpapp -g 30002 -i 0 -u Tuxedo -U /opt/app/atmi/ULOG -m 0 -A
+oracle    4854  3465  0 17:25 pts/0    00:00:00 grep --color=auto -i bbl
+
+-------------------------------------------------------------------------------
+
+171555.Tuxedo!BBL.4274.2252366272.0: CMDTUX_CAT:26: INFO: The BBL is exiting system
+171555.Tuxedo!tmboot.4271.4120519104.-2: 03-23-2021: Tuxedo Version 12.1.3.0.0, 64-bit
+171555.Tuxedo!tmboot.4271.4120519104.-2: CMDTUX_CAT:825: ERROR: Process BBL at Tuxedo failed with                                                                                                     /T tperrno (TPESYSTEM - internal system error)
+171555.Tuxedo!tmboot.4271.4120519104.-2: WARN: No BBL available on site Tuxedo.
+        Will not attempt to boot server processes on that site.
+172430.Tuxedo!tmadmin.4615.2215342528.-2: 03-23-2021: Tuxedo Version 12.1.3.0.0, 64-bit
+172430.Tuxedo!tmadmin.4615.2215342528.-2: TMADMIN_CAT:1330: INFO: Command: crdl -z "/opt/app/atmi                                                                                                    /TLOG" -b 1024
+172458.Tuxedo!BBL.4827.3889885632.0: 03-23-2021: Tuxedo Version 12.1.3.0.0, 64-bit, Patch Level (                                                                                                    none)
+172458.Tuxedo!BBL.4827.3889885632.0: LIBTUX_CAT:262: INFO: Standard main starting
+

@@ -1,0 +1,56 @@
+ TUXCONFIG (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpserv) of machine Tuxedo must be the same as the 
+TUXCONFIG environment variable (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpserv)
+
+TUXCONFIG (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp) of machine Tuxedo must be the same as the 
+TUXCONFIG environment variable (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpserv)
+
+
+
+ ERROR: TUXCONFIG (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp) of machine Tuxedo must be the same as the 
+TUXCONFIG environment variable (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpserv)
+
+
+/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp
+
+crdl -z "/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpdir/TLOG" -b 1024
+
+
+
+export APPDIR=/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp
+export TUXDIR=/opt/app/TuxedoHome/tuxedo12.1.3.0.0
+export PATH=$PATH:$TUXDIR/bin
+export TUXCONFIG=$APPDIR/simpserv
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$TUXDIR/lib
+export TUXDIR TUXCONFIG PATH LD_LIBRARY_PATH
+
+
+	   	APPDIR="/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi"
+                TUXCONFIG="/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpserv"
+                TUXDIR="/opt/app/TuxedoHome/tuxedo12.1.3.0.0"
+                ULOGPFX="/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/ULOG"
+                TLOGDEVICE="/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/TLOG"
+
+
+
+
+
+
+141155.Tuxedo!BBL.6056.3513541056.0: ERROR: msgrcv err(LIBTUX_CAT:666: 
+ERROR: Message operation failed because the queue was removed): errno=43,qid=62,buf=28619800,bytes=4600,type=-1073741824,flag=0
+141155.Tuxedo!BBL.6056.3513541056.0: 
+
+ERROR: msgrcv err(LIBTUX_CAT:669: ERROR: Message operation failed because of the invalid message queue identifier): errno=22,qid=62,buf=28619800,bytes=4600,type=-1073741824,flag=0
+141155.Tuxedo!BBL.6056.3513541056.0: LIBTUX_CAT:271: ERROR: System lock semop failure, key = 33271 (errno = 22)
+141155.Tuxedo!BBL.6056.3513541056.0: LIBTUX_CAT:268: ERROR: Failed to stop serving
+
+
+
+(/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpserv/simpdir/tuxconfig) of machine Tuxedo must be the same as the 
+TUXCONFIG environment variable (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpdir/simpserv)
+
+
+
+
+ (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpserv/simpdir/tuxconfig) of machine Tuxedo must be the same as the 
+TUXCONFIG environment variable (/opt/app/TuxedoHome/tuxedo12.1.3.0.0/samples/atmi/simpapp/simpdir/tuxconfig)
+

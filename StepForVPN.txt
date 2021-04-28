@@ -1,0 +1,37 @@
+poo@rocket:~$ ssh -v -X root@localhost
+
+root@rocket:/home/poo# xhost +
+access control disabled, clients can connect from any host
+
+[oracle@oraserver ]$ grep DISPLAY ~/.bash_profile
+export DISPLAY=192.168.57.1:0
+
+root@rocket:/home/poo# xdpyinfo | grep name
+name of display:    :0
+root@rocket:/home/poo#
+
+[root@oraserver oracle]# xdpyinfo
+bash: xdpyinfo: command not found
+
+./runInstaller
+
+
+ssh -v -X oraadmin@oraserver
+
+
+
+export DISPLAY=192.168.0.3:0
+
+
+192.168.0.3
+
+xauth list | grep -i 0
+
+xauth add :0 MIT-MAGIC-COOKIE-1  11a536b5261f93b0de9ef564082e03c0
+
+ xauth list
+
+
+
+
+192.168.122.1

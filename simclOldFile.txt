@@ -1,0 +1,60 @@
+#include <stdio.h>         
+#include "atmi.h"            /* TUXEDO */
+
+
+
+     #ifdef __STDC__
+     main(int argc, char *argv[])
+
+    #else
+
+    main(argc, argv)
+    int argc;
+    char *argv[];
+    #endif
+
+    {
+
+             char *sendbuf, *rcvbuf;
+             int sendlen, rcvlen;
+             int ret;
+
+             if(argc != 2) {
+                      fprintf(stderr, "Usage: simpcl string\n");
+                      exit(1);
+             }
+             /* Attach to BEA TUXEDO as a Client Process */
+             if (tpinit((TPINIT *) NULL) == -1) {
+                      fprintf(stderr, "Tpinit failed\n");
+                      exit(1);
+             }
+             sendlen = strlen(argv[1]);
+             if((sendbuf = (char *)tpalloc("STRING", NULL, sendlen+1))== NULL){
+                      fprintf(stderr,"Error allocating send buffer\n");
+                      tpterm();
+                      exit(1);
+             }
+             if((rcvbuf = (char *)tpalloc("STRING", NULL, sendlen+1))== NULL){
+                      fprintf(stderr,"Error allocating receive buffer\n");
+                      tpfree(sendbuf);
+                      tpterm();
+                      exit(1);
+             }
+             strcpy(sendbuf, argv[1]);
+             ret = tpcall("TOUPPER", sendbuf, NULL, &rcvbuf, &rcvlen, 0);
+             if(ret == -1) {
+                      fprintf(stderr, "Can't send request to service TOUPPER\n");
+                      fprintf(stderr, "Tperrno = %d, %s\n", tperrno,
+                                tmemsgs[tperrno]);
+                      tpfree(sendbuf);
+                      tpfree(rcvbuf);
+                      tpterm();
+                      exit(1);
+             }
+             printf("Returned string is: %s\n", rcvbuf);
+
+             /* Free Buffers & Detach from Oracle TUXEDO */
+             tpfree(sendbuf);
+             tpfree(rcvbuf);
+             tpterm();
+    }

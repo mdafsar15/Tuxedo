@@ -1,0 +1,51 @@
+dc.genx.com.
+
+
+=======================================================================================================================
+
+*RESOURCES
+IPCKEY          33270
+UID             54321
+GID             54321
+#Example:
+#IPCKEY         123456
+
+DOMAINID        simpapp
+MASTER          simpserv
+MAXACCESSERS    10
+MAXSERVERS      5
+MAXSERVICES     10
+MODEL           SHM
+LDBAL           Y
+
+
+*MACHINES
+DEFAULT:
+
+                APPDIR="/opt/app/atmi"
+                TUXCONFIG="/opt/app/atmi/simpserv"
+                TUXDIR="/opt/app/TuxedoHome/tuxedo12.1.3.0.0"
+                ULOGPFX="/opt/app/atmi/ULOG"
+                TLOGDEVICE="/opt/app/atmi/TLOG"
+#Example:
+#               APPDIR="/home/me/simpapp"
+#               TUXCONFIG="/home/me/simpapp/tuxconfig"
+#               TUXDIR="/usr/tuxedo"
+
+simpserv        LMID="simpserv"
+
+#Example:
+#beatux         LMID=simple
+
+*GROUPS
+GROUP1
+        LMID="simpserv" GRPNO=1 OPENINFO=NONE TMSCOUNT=3
+
+*SERVERS
+DEFAULT:
+
+simpserv        SRVGRP=GROUP1 SRVID=1
+                CLOPT="-A"
+                SEQUENCE=1000
+                RQPERM=0666     REPLYQ=N        RPPERM=0666     MIN=1   MAX=1   CONV=N
+-- INSERT --                                                                                  

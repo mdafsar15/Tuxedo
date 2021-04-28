@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TJSconfig version="2.0">
+    <tux-server-config>
+        <server-class name="MyTuxedoJavaServer"></server-class>
+    </tux-server-config>
+</TJSconfig>

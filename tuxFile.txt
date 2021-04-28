@@ -1,0 +1,6 @@
+/opt/app/atmi/simpserv
+
+173914.Tuxedo!tmloadcf.5698.4267389376.-2: CMDTUX_CAT:872: INFO: TUXCONFIG file /opt/app/atmi/sim                                                                                                    pserv has been updated
+
+
+173914.Tuxedo!tmloadcf.5698.4267389376.-2: CMDTUX_CAT:872: INFO: TUXCONFIG file /opt/app/atmi/simpserv has been updated
