@@ -261,6 +261,8 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib/amd64/server
 
 https://docs.oracle.com/cd/E35855_01/tuxedo/docs12c/messages/tuxjs/tuxjs002.html
 
+MyTuxedoJavaServer
+
 =================================================Tuxedo oracle19c===============
 https://titanwolf.org/Network/Articles/Article?AID=f5b88e8b-1eb3-43d6-943e-9b1dbea4ecb6#gsc.tab=0
 
